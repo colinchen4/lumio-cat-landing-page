@@ -1,0 +1,19 @@
+<svg width="640" height="360" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2.5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect x="2" y="2" width="316" height="176" rx="16" fill="#1a1a1a" stroke="#0d0d0d" stroke-width="2"/>
+  <rect x="10" y="10" width="300" height="160" rx="8" fill="#000000" />
+
+  <g id="face-container" filter="url(#glow)" fill="white" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cy="90" cx="130" rx="4" ry="8" />
+    <ellipse cy="90" cx="190" rx="4" ry="8" />
+    
+    <path d="M 142 125 Q 151 135 160 125 Q 169 135 178 125" fill="none" stroke-width="5"/>
+
+    <circle cx="190" cy="105" r="4" fill="#aaddff" stroke="none" opacity="0">
+      <animate attributeName="cy" values="105; 145" dur="1.5s" repeatCount="indefinite" begin="0.5s"/>
+      <animate attributeName="opacity" values="0; 1; 0" dur="1.5s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+  </g>
+</svg>

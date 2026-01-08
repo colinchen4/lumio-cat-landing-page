@@ -1,0 +1,20 @@
+<svg width="640" height="360" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow-red"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect x="2" y="2" width="316" height="176" rx="16" fill="#1a1a1a" stroke="#0d0d0d" stroke-width="2"/>
+  <rect x="10" y="10" width="300" height="160" rx="8" fill="#000000" />
+
+  <g id="face-container" filter="url(#glow-red)" fill="none" stroke="#ff3333" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <animateTransform attributeName="transform" type="translate" values="-1 0; 1 0; -1 0" dur="0.1s" repeatCount="indefinite"/>
+    
+    <line x1="120" y1="85" x2="150" y2="105">
+       <animate attributeName="y1" values="85; 80; 85" dur="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="180" y1="105" x2="210" y2="85">
+        <animate attributeName="y2" values="85; 80; 85" dur="1s" repeatCount="indefinite"/>
+    </line>
+    
+    <path d="M 142 130 Q 151 140 160 130 Q 169 140 178 130" stroke-width="5"/>
+  </g>
+</svg>

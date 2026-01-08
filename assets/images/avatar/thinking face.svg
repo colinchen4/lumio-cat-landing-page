@@ -1,0 +1,26 @@
+<svg width="640" height="360" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2.5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect x="2" y="2" width="316" height="176" rx="16" fill="#1a1a1a" stroke="#0d0d0d" stroke-width="2"/>
+  <rect x="10" y="10" width="300" height="160" rx="8" fill="#000000" />
+
+  <g id="face-container" filter="url(#glow)" fill="white" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 125 95 Q 140 95 155 95" fill="none" />
+    <path d="M 175 95 Q 190 95 205 95" fill="none" />
+    
+    <path d="M 142 135 Q 151 145 160 135 Q 169 145 178 135" fill="none" stroke-width="5"/>
+
+    <g transform="translate(230, 60) scale(0.8)" stroke="none">
+        <circle cx="-30" cy="0" r="8">
+        <animate attributeName="cy" values="0; -15; 0" dur="0.8s" repeatCount="indefinite" begin="0s"/>
+        </circle>
+        <circle cx="0" cy="0" r="8">
+        <animate attributeName="cy" values="0; -15; 0" dur="0.8s" repeatCount="indefinite" begin="0.2s"/>
+        </circle>
+        <circle cx="30" cy="0" r="8">
+        <animate attributeName="cy" values="0; -15; 0" dur="0.8s" repeatCount="indefinite" begin="0.4s"/>
+        </circle>
+    </g>
+  </g>
+</svg>
