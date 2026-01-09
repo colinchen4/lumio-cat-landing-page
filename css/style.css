@@ -1337,6 +1337,36 @@ body {
     font-size: 0.95rem;
 }
 
+.footer-founders {
+    margin-bottom: 30px;
+}
+
+.footer-founders h4 {
+    color: #ffb74d;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.founder {
+    margin-bottom: 10px;
+}
+
+.founder span {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.founder a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.founder a:hover {
+    color: #ffb74d;
+}
+
 .footer-links {
     display: flex;
     justify-content: center;
