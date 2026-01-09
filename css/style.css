@@ -852,111 +852,141 @@ body {
     color: #ffb74d;
 }
 
-.how-it-works-section .section-subtitle {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-/* Three Dimensions Layout */
-.dimensions-container {
+/* Learning Loop Layout */
+.learning-loop {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     gap: 0;
     margin-top: 60px;
 }
 
-.dimension-card {
+.loop-step {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    padding: 50px 35px;
+    padding: 40px 30px;
     border-radius: 20px;
     text-align: center;
     flex: 1;
     max-width: 320px;
     position: relative;
-    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.dimension-card:hover {
-    transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.15);
-}
-
-.dimension-card.see {
+.loop-step.step-1 {
     border-top: 4px solid #4fc3f7;
 }
 
-.dimension-card.think {
+.loop-step.step-2 {
     border-top: 4px solid #ffb74d;
+    max-width: 380px;
 }
 
-.dimension-card.respond {
+.loop-step.step-3 {
     border-top: 4px solid #81c784;
 }
 
-.dimension-icon {
+.step-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #ffb74d, #ff8a65);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.step-icon-large {
     width: 80px;
     height: 80px;
-    margin: 0 auto 25px;
-}
-
-.dimension-card.see .dimension-icon {
-    color: #4fc3f7;
-}
-
-.dimension-card.think .dimension-icon {
+    margin: 20px auto;
     color: #ffb74d;
 }
 
-.dimension-card.respond .dimension-icon {
-    color: #81c784;
-}
-
-.dimension-icon svg {
+.step-icon-large svg {
     width: 100%;
     height: 100%;
 }
 
-.dimension-card h3 {
-    font-size: 1.8rem;
+.loop-step h3 {
+    font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
 }
 
-.dimension-subtitle {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-}
-
-.dimension-card > p:last-child {
+.loop-step > p {
     color: rgba(255, 255, 255, 0.85);
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
-.dimension-connector {
+.loop-arrow {
     display: flex;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 15px;
+    color: #ffb74d;
 }
 
-.connector-line {
-    width: 30px;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.3);
+.loop-arrow svg {
+    width: 32px;
+    height: 32px;
 }
 
-.connector-dot {
-    width: 10px;
-    height: 10px;
-    background: #ffb74d;
-    border-radius: 50%;
+/* Three Dimensions in Step 2 */
+.context-dimensions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.dimensions-flow {
+.context-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.context-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    color: #4fc3f7;
+}
+
+.context-item:nth-child(2) .context-icon {
+    color: #ffb74d;
+}
+
+.context-item:nth-child(3) .context-icon {
+    color: #81c784;
+}
+
+.context-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.context-item span {
+    font-weight: 600;
+    font-size: 1rem;
+    display: block;
+}
+
+.context-item p {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 2px 0 0 0;
+}
+
+.loop-summary {
     text-align: center;
     margin-top: 50px;
     padding: 25px 40px;
@@ -967,29 +997,34 @@ body {
     margin-right: auto;
 }
 
-.dimensions-flow p {
+.loop-summary p {
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.1rem;
     line-height: 1.6;
     margin: 0;
 }
 
-.dimensions-flow strong {
+.loop-summary strong {
     color: #ffb74d;
 }
 
 @media (max-width: 900px) {
-    .dimensions-container {
+    .learning-loop {
         flex-direction: column;
+        align-items: center;
         gap: 20px;
     }
 
-    .dimension-card {
+    .loop-step {
         max-width: 100%;
         width: 100%;
     }
 
-    .dimension-connector {
+    .loop-step.step-2 {
+        max-width: 100%;
+    }
+
+    .loop-arrow {
         transform: rotate(90deg);
         padding: 10px 0;
     }
